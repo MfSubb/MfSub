@@ -1,0 +1,178 @@
+* {
+    cursor: url('cosas/Webp.net-resizeimage.png'), auto;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    color: rgb(0, 185, 0);
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px rgb(0, 185, 0);
+    border-radius: 10px;
+}
+
+.overlay-gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(cosas/estatica.gif);
+    opacity: 0.2;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-links a {
+    color: rgb(0, 150, 0);
+    text-decoration: none;
+    font-size: 24px;
+    animation: greenPulse 4s infinite ease-in-out;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: rgb(0, 255, 0);
+    text-shadow: 0 0 10px lime;
+}
+
+.main-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(6, 66, 6);
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 0 20px 5px lime;
+}
+
+.pair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.pair.reverse {
+    flex-direction: row-reverse;
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
+    border: 3px solid lime;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px lime;
+}
+
+.text {
+    background-color: green;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.corner-gif,
+.corner-gif-right,
+.bottom-left-gif,
+.bottom-right-gif {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.corner-gif {
+    top: 0;
+    left: 0;
+}
+
+.corner-gif-right {
+    top: 0;
+    right: 0;
+}
+
+.bottom-left-gif {
+    bottom: 20px;
+    left: 20px;
+}
+
+.bottom-right-gif {
+    bottom: 20px;
+    right: 45px;
+}
+
+.corner-gif img,
+.corner-gif-right img,
+.bottom-left-gif img,
+.bottom-right-gif img {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: 0;
+}
+
+.corner-gif img {
+    width: 350px;
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    animation: parpadeo 0.1s infinite;
+}
+
+.circle-photo {
+    border-radius: 50%;
+}
+
+@keyframes greenPulse {
+    0% { color: #00ff00; }
+    25% { color: #00cc00; }
+    50% { color: #009900; }
+    75% { color: #00cc00; }
+    100% { color: #00ff00; }
+}
+
+.green-pulse {
+    animation: greenPulse 2s infinite ease-in-out;
+}
+
+
+
